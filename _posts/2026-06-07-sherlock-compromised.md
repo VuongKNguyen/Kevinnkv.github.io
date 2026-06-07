@@ -11,8 +11,6 @@ tags:
   - Malware Analysis
   - Pikabot
   - DNS Tunneling
-image:
-  path: /assets/img/posts/compromised/cover.png
 ---
 
 ## Introduction
@@ -36,8 +34,6 @@ Một máy tính trong mạng công ty đã bị chiếm đoạt bởi một thr
 3. Tìm các IOC liên quan
 4. Phân tích các kỹ thuật C2 (Command and Control)
 5. Xác định các chỉ số DNS tunneling
-
-![Compromised Machine](https://chatgpt.com/assets/img/posts/compromised/scenario.png)
 
 ---
 
@@ -80,8 +76,6 @@ http
 
 **Kết quả:** IP address `162.252.172.54` được xác định là nguồn phục vụ malware.
 
-![Task 1 - Initial Access](https://chatgpt.com/assets/img/posts/compromised/task1.png)
-
 ---
 
 ## Task 2 – Malware Hash
@@ -103,8 +97,6 @@ sha256sum malware.exe
 
 **Kết quả:** SHA256 hash của Pikabot malware được tính để so sánh với các database như VirusTotal.
 
-![Task 2 - Malware Hash](https://chatgpt.com/assets/img/posts/compromised/task2.png)
-
 ---
 
 ## Task 3 – Malware Family
@@ -125,8 +117,6 @@ sha256sum malware.exe
 - Có khả năng inject code vào process khác (process hollowing)
 - Sử dụng encrypted C2 communication
 - Phát triển nhanh chóng với các biến thể mới
-
-![Task 3 - Pikabot](https://chatgpt.com/assets/img/posts/compromised/task3.png)
 
 ---
 
@@ -151,8 +141,6 @@ curl "https://www.virustotal.com/api/v3/files/HASH" \
 - Xác định thời điểm malware lần đầu tiên được phát hiện
 - Đánh giá mức độ nguy hiểm và độ lây lan
 - Tìm thêm thông tin về campaign tấn công
-
-![Task 4 - First Seen](https://chatgpt.com/assets/img/posts/compromised/task4.png)
 
 ---
 
@@ -180,8 +168,6 @@ ssl.handshake
 ```
 ssl.handshake.certificate
 ```
-
-![Task 5 - HTTPS C2 Ports](https://chatgpt.com/assets/img/posts/compromised/task5.png)
 
 ---
 
@@ -215,8 +201,6 @@ id-at-localityName = "LocationName"
 - Giúp associate certificate với các campaign khác
 - Có thể là thông tin thực hoặc fake
 
-![Task 6 - Certificate LocalityName](https://chatgpt.com/assets/img/posts/compromised/task6.png)
-
 ---
 
 ## Task 7 – Certificate notBefore
@@ -242,8 +226,6 @@ Validity:
 - Xác định thời gian threat actor chuẩn bị campaign
 - So sánh với ngày malware được download
 - Tìm các khoảng thời gian có hoạt động C2
-
-![Task 7 - Certificate notBefore](https://chatgpt.com/assets/img/posts/compromised/task7.png)
 
 ---
 
@@ -284,8 +266,6 @@ tcpdump -r file.pcap 'udp port 53' -w dns_only.pcap
 
 # Sử dụng dnscat2 hoặc iodine để detect DNS tunnel
 ```
-
-![Task 8 - DNS Tunneling](https://chatgpt.com/assets/img/posts/compromised/task8.png)
 
 ---
 

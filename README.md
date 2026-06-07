@@ -63,8 +63,7 @@ _posts/YYYY-MM-DD-tieu-de.md
 ├── _tabs/               # Trang About, Archives, Categories, Tags
 ├── assets/              # Ảnh, CSS, JS
 │   ├── img/
-│   │   ├── avatar.svg   # Avatar
-│   │   └── htb/         # Thumbnail machine HTB
+│   │   └── avatar.svg   # Avatar (sidebar)
 │   └── lib/             # Thư viện ngoài
 ├── README.md            # File này
 └── index.html           # Trang chủ
@@ -77,11 +76,11 @@ _posts/YYYY-MM-DD-tieu-de.md
 Ví dụ Front Matter cho bài post:
 ```yaml
 ---
-title: HackTheBox - Legacy Write-up
-date: 2024-05-10 10:00:00 +0700
-categories: [HackTheBox, Windows]
-tags: [smb, exploit]
-image: /assets/img/htb/legacy.png
+title: HackTheBox - Meerkat Write-up
+date: 2026-05-10 20:00:00 +0700
+categories: [HackTheBox, Sherlock]
+tags: [forensics, json, jq, blue-team]
+description: "Phân tích forensics với file JSON"
 ---
 ```
 
